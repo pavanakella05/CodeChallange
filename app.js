@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', [])
+angular.module('sortApp', [])
 .controller('mainCtrl', ['$scope', '$http', function ($scope, $http) {
 
 	$scope.sortColumn = 'id';
@@ -19,9 +19,9 @@ angular.module('myApp', [])
 
 	// Function to initiate $http service
 	$scope.init = function () {
-	var url = 'http://jsonplaceholder.typicode.com/posts';
-	$http.get(url)
-	.then(successCallback, errorCallback);
+		var url = 'http://jsonplaceholder.typicode.com/posts';
+		$http.get(url)
+		.then(successCallback, errorCallback);
 	}
 
 	// Function to Sort Data based on Column clicked

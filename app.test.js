@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp module test', function() {
+describe('sortApp module test', function() {
 	var scope, $controllerConstructor, httpWrapper;
-	beforeEach(module('myApp'));
+	beforeEach(module('sortApp'));
 	beforeEach(inject(function ($controller, $rootScope, $injector) {
 		scope = $rootScope.$new();
 		httpWrapper = $injector.get('$http');
@@ -29,6 +29,8 @@ describe('myApp module test', function() {
 		httpStub.withArgs().returns(response);
 		scope.init();
 		expect(httpStub.withArgs().calledOnce).to.be.ok;
+		expect(scope.contents).to.equal(resData.data);
+		expect(scope.dataExist).to.equal(true);
 		httpStub.restore();
 	});
 
@@ -51,11 +53,13 @@ describe('myApp module test', function() {
 		scope.dataExist = true;
 		scope.init();
 		expect(httpStub.withArgs().calledOnce).to.be.ok;
+		expect(scope.error).to.equal('404: Data Not Found');
+		expect(scope.contents).to.equal(undefined);
 		expect(scope.dataExist).to.equal(false);
 		httpStub.restore();
 	});
 
-    it('should handle the function sortData when column matched', function() {
+	it('should handle the function sortData when column matched', function() {
 		scope.reverseSort = false;
 		scope.sortColumn = 'id';
 		scope.sortData('id');

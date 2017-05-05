@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
-<head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="./assets/styles/app.css">
-</head>
-<body ng-controller="mainCtrl">
-  <h1> Table Contents </h1>
-  <h2>{{ error }}</h2>
-    <table ng-show = dataExist>
-      <thead>
-        <tr>
-          <th class="colWidth" ng-click= "sortData('id')">
-            ID <div class="sortCol" ng-class="getSortClass('id')"></div>
-          </th>
-          <th class="colWidth" ng-click= "sortData('userId')">
-            USER ID <div class="sortCol" ng-class="getSortClass('userId')"></div>
-          </th>
-          <th ng-click= "sortData('title')">
-            TITLE <div class="sortCol" ng-class="getSortClass('title')"></div>
-          </th>
-          <th ng-click= "sortData('body')">
-            BODY <div class="sortCol" ng-class="getSortClass('body')"></div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="content in contents | orderBy:sortColumn:reverseSort">
-          <td>{{ content.id }}</td>
-          <td>{{ content.userId }}</td>
-          <td>{{ content.title }}</td>
-          <td>{{ content.body }}</td>
-        </tr>
-      </tbody>
-    </table>
+<html lang="en" ng-app="sortApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My AngularJS App</title>
+    <link rel="stylesheet" href="./assets/styles/app.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <h1> Table Contents </h1>
+    <h2>{{ error }}</h2>
+      <table ng-show = dataExist>
+        <thead>
+          <tr>
+            <th class="colWidth" ng-click= "sortData('id')">
+              ID <div class="sortCol" ng-class="getSortClass('id')"></div>
+            </th>
+            <th class="colWidth" ng-click= "sortData('userId')">
+              USER ID <div class="sortCol" ng-class="getSortClass('userId')"></div>
+            </th>
+            <th ng-click= "sortData('title')">
+              TITLE <div class="sortCol" ng-class="getSortClass('title')"></div>
+            </th>
+            <th ng-click= "sortData('body')">
+              BODY <div class="sortCol" ng-class="getSortClass('body')"></div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="content in contents | orderBy:sortColumn:reverseSort">
+            <td>{{ content.id }}</td>
+            <td>{{ content.userId }}</td>
+            <td>{{ content.title }}</td>
+            <td>{{ content.body }}</td>
+          </tr>
+        </tbody>
+      </table>
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
