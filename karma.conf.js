@@ -6,12 +6,12 @@ module.exports = function(config) {
         frameworks: ['mocha', 'chai'],
 
         files: [
-		'bower_components/angular/angular.js',
-		'bower_components/angular-mocks/angular-mocks.js',
-		'app.js',
-		'**/*.test.js',
-        'node_modules/sinon/pkg/sinon-1.17.*.js'
-		],
+            'bower_components/angular/angular.js',
+            'bower_components/angular-mocks/angular-mocks.js',
+            'node_modules/sinon/pkg/sinon-1.17.*.js',
+            'app.js',
+            '**/*.test.js'
+        ],
 
         reporters: ['progress'],
         port: 9876,

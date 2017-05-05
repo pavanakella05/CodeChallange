@@ -22,13 +22,13 @@ angular.module('sortApp', [])
 		var url = 'http://jsonplaceholder.typicode.com/posts';
 		$http.get(url)
 		.then(successCallback, errorCallback);
-	}
+	};
 
 	// Function to Sort Data based on Column clicked
 	$scope.sortData = function (column) {
 		$scope.reverseSort = ($scope.sortColumn === column) ? !$scope.reverseSort : false;
 		$scope.sortColumn = column;
-	}
+	};
 
 	// Function to apply class based on condtion and boolean value
 	$scope.getSortClass = function (column) {
@@ -36,7 +36,7 @@ angular.module('sortApp', [])
 			return $scope.reverseSort ? 'asc-arrow' : 'desc-arrow';
 		}
 		return '';
-	}
+	};
 
 	$scope.init();
 }]);
