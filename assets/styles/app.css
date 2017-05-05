@@ -1,0 +1,42 @@
+/* app css stylesheet */
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid black;
+	padding: 5px;
+	text-align: left;
+}
+
+th {
+	cursor: pointer;
+	background-color: #ffff00;
+}
+
+th.colWidth {
+	width: 10%;
+}
+
+.sortCol {
+	width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	display: inline-block;
+}
+
+.asc-arrow {
+	border-bottom: 10px solid black;
+	color:;
+}
+
+.desc-arrow {
+	border-top: 10px solid black;
+}
