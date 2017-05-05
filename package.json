@@ -1,0 +1,30 @@
+{
+  "name": "CodeChallange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavanakella05/CodeChallange.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavanakella05/CodeChallange/issues"
+  },
+  "homepage": "https://github.com/pavanakella05/CodeChallange",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^0.5.3",
+    "karma-chrome-launcher": "^2.1.0",
+    "karma-sinon-chai": "~0.2.0",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^3.3.0",
+    "sinon": "~1.17.*"
+  }
+}
